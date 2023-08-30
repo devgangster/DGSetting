@@ -27,7 +27,7 @@ https://github.com/aheze/Setting
 ### Usage
 
 ```swift
-import Setting
+import DGSetting
 import SwiftUI
 
 struct PlaygroundView: View {

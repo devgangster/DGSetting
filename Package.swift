@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "Setting",
+    name: "DGSetting",
     platforms: [
         .iOS(.v15), .macOS(.v12)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Setting",
-            targets: ["Setting"]
+            name: "DGSetting",
+            targets: ["DGSetting"]
         ),
     ],
     dependencies: [
@@ -23,7 +23,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Setting",
+            name: "DGSetting",
             dependencies: [],
             path: "Sources"
         )

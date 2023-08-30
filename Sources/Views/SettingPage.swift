@@ -137,27 +137,35 @@ struct SettingPageView<Content>: View where Content: View {
     }
 
     @ViewBuilder var main: some View {
-        if #available(iOS 16.0, macOS 13.0, *) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: spacing) {
-                    content
+        GeometryReader { geometry in
+            if #available(iOS 16.0, macOS 13.0, *) {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: spacing) {
+                        content
+                        Spacer(minLength: 0)
+                    }
+                    .frame(maxWidth: .infinity, minHeight: geometry.size.height, alignment: .leading)
+                    .padding(.vertical, verticalPadding)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, verticalPadding)
-            }
-            .scrollDismissesKeyboard(.interactively)
-            .background(backgroundColor ?? settingBackgroundColor)
-            .navigationTitle(title)
-        } else {
-            ScrollView {
-                VStack(alignment: .leading, spacing: spacing) {
-                    content
+                .position(.init(x: geometry.size.width/2, y: geometry.size.height/2))
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .scrollDismissesKeyboard(.interactively)
+                .background(backgroundColor ?? settingBackgroundColor)
+                .navigationTitle(title)
+            } else {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: spacing) {
+                        content
+                        Spacer(minLength: 0)
+                    }
+                    .frame(maxWidth: .infinity, minHeight: geometry.size.height, alignment: .leading)
+                    .padding(.vertical, verticalPadding)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, verticalPadding)
+                .position(.init(x: geometry.size.width/2, y: geometry.size.height/2))
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .background(backgroundColor ?? settingBackgroundColor)
+                .navigationTitle(title)
             }
-            .background(backgroundColor ?? settingBackgroundColor)
-            .navigationTitle(title)
         }
     }
 }

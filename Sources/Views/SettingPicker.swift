@@ -66,6 +66,7 @@ public struct SettingPicker: View, Setting {
         public var groupDividerLeadingMargin = CGFloat(16)
         public var groupDividerTrailingMargin = CGFloat(0)
         public var groupDividerColor: Color?
+        public var accentColor: Color?
 
         public init(
             verticalPadding: CGFloat = CGFloat(14),
@@ -79,7 +80,8 @@ public struct SettingPicker: View, Setting {
             groupBackgroundCornerRadius: CGFloat = CGFloat(12),
             groupDividerLeadingMargin: CGFloat = CGFloat(16),
             groupDividerTrailingMargin: CGFloat = CGFloat(0),
-            groupDividerColor: Color? = nil
+            groupDividerColor: Color? = nil,
+            accentColor: Color? = nil
         ) {
             self.verticalPadding = verticalPadding
             self.horizontalPadding = horizontalPadding
@@ -93,6 +95,7 @@ public struct SettingPicker: View, Setting {
             self.groupDividerLeadingMargin = groupDividerLeadingMargin
             self.groupDividerTrailingMargin = groupDividerTrailingMargin
             self.groupDividerColor = groupDividerColor
+            self.accentColor = accentColor
         }
     }
 
@@ -214,7 +217,7 @@ struct SettingPickerView: View {
 
                         if index == selectedIndex {
                             Image(systemName: "checkmark")
-                                .foregroundColor(.accentColor)
+                                .foregroundColor(choicesConfiguration.accentColor ?? .accentColor)
                         }
                     }
                     .padding(.horizontal, choicesConfiguration.horizontalPadding)
@@ -254,7 +257,7 @@ struct SettingPickerChoicesView: View {
 
                             if index == selectedIndex {
                                 Image(systemName: "checkmark")
-                                    .foregroundColor(.accentColor)
+                                    .foregroundColor(choicesConfiguration.accentColor ?? .accentColor)
                             }
                         }
                         .padding(.horizontal, choicesConfiguration.horizontalPadding)

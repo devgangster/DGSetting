@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C25FE1929A696B900C11678 /* Setting in Frameworks */ = {isa = PBXBuildFile; productRef = 3C25FE1829A696B900C11678 /* Setting */; };
 		3C25FE1B29A6B06C00C11678 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FE1A29A6B06C00C11678 /* PreferencesView.swift */; };
 		3C25FE1D29A6B0AF00C11678 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FE1C29A6B0AF00C11678 /* Utilities.swift */; };
 		3C25FE1F29A6B0D700C11678 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FE1E29A6B0D700C11678 /* SettingsView.swift */; };
@@ -16,6 +15,7 @@
 		3CD8B78C29A683D100463C48 /* SettingExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8B78B29A683D100463C48 /* SettingExampleApp.swift */; };
 		3CD8B78E29A683D100463C48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8B78D29A683D100463C48 /* ContentView.swift */; };
 		3CD8B79029A683D300463C48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD8B78F29A683D300463C48 /* Assets.xcassets */; };
+		B278C1F32A9F359600A581C0 /* DGSetting in Frameworks */ = {isa = PBXBuildFile; productRef = B278C1F22A9F359600A581C0 /* DGSetting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +24,12 @@
 		3C25FE1E29A6B0D700C11678 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3C25FE2129A6C24C00C11678 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
 		3C25FE2329A6D2A300C11678 /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
-		3CC9C13029FCD1FF00177000 /* Setting */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Setting; path = ..; sourceTree = "<group>"; };
 		3CD8B78829A683D100463C48 /* SettingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD8B78B29A683D100463C48 /* SettingExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingExampleApp.swift; sourceTree = "<group>"; };
 		3CD8B78D29A683D100463C48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CD8B78F29A683D300463C48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CD8B79129A683D300463C48 /* SettingExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SettingExample.entitlements; sourceTree = "<group>"; };
+		B278C1F02A9F353700A581C0 /* DGSetting */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DGSetting; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C25FE1929A696B900C11678 /* Setting in Frameworks */,
+				B278C1F32A9F359600A581C0 /* DGSetting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,9 +47,10 @@
 		3CD8B77F29A683D100463C48 = {
 			isa = PBXGroup;
 			children = (
-				3CC9C13029FCD1FF00177000 /* Setting */,
+				B278C1EF2A9F353700A581C0 /* Packages */,
 				3CD8B78A29A683D100463C48 /* SettingExample */,
 				3CD8B78929A683D100463C48 /* Products */,
+				B278C1F12A9F359600A581C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +78,21 @@
 			path = SettingExample;
 			sourceTree = "<group>";
 		};
+		B278C1EF2A9F353700A581C0 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B278C1F02A9F353700A581C0 /* DGSetting */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B278C1F12A9F359600A581C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,7 +110,7 @@
 			);
 			name = SettingExample;
 			packageProductDependencies = (
-				3C25FE1829A696B900C11678 /* Setting */,
+				B278C1F22A9F359600A581C0 /* DGSetting */,
 			);
 			productName = SettingExample;
 			productReference = 3CD8B78829A683D100463C48 /* SettingExample.app */;
@@ -125,7 +141,6 @@
 			);
 			mainGroup = 3CD8B77F29A683D100463C48;
 			packageReferences = (
-				3C25FE1729A696B900C11678 /* XCRemoteSwiftPackageReference "Setting" */,
 			);
 			productRefGroup = 3CD8B78929A683D100463C48 /* Products */;
 			projectDirPath = "";
@@ -280,7 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SettingExample/SettingExample.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -303,6 +318,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aheze.SettingExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -317,7 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SettingExample/SettingExample.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -340,6 +356,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aheze.SettingExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -371,22 +388,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3C25FE1729A696B900C11678 /* XCRemoteSwiftPackageReference "Setting" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aheze/Setting.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		3C25FE1829A696B900C11678 /* Setting */ = {
+		B278C1F22A9F359600A581C0 /* DGSetting */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3C25FE1729A696B900C11678 /* XCRemoteSwiftPackageReference "Setting" */;
-			productName = Setting;
+			productName = DGSetting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

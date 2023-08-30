@@ -6,7 +6,7 @@
 //  Copyright © 2023 A. Zheng. All rights reserved.
 //
 
-import Setting
+import DGSetting
 import SwiftUI
 
 struct ControlPanelView: View {
