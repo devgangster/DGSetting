@@ -13,6 +13,7 @@ import SwiftUI
  */
 public struct SettingTupleView: Setting {
     public var id: AnyHashable?
+    public var accessibilityIdentifier: String? = nil
     public var settings: [Setting]
 }
 

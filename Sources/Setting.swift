@@ -13,6 +13,7 @@ import SwiftUI
  */
 public protocol Setting {
     var id: AnyHashable? { get set }
+    var accessibilityIdentifier: String? { get set }
 }
 
 public extension Setting {

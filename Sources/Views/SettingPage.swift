@@ -20,6 +20,7 @@ public struct SettingPage: Setting {
     public var backgroundColor: Color?
     public var navigationTitleDisplayMode = NavigationTitleDisplayMode.automatic
     public var previewConfiguration = PreviewConfiguration()
+    public var accessibilityIdentifier: String? = nil
     @SettingBuilder public var tuple: SettingTupleView
 
     public init(
@@ -31,6 +32,7 @@ public struct SettingPage: Setting {
         backgroundColor: Color? = nil,
         navigationTitleDisplayMode: SettingPage.NavigationTitleDisplayMode = NavigationTitleDisplayMode.automatic,
         previewConfiguration: SettingPage.PreviewConfiguration = PreviewConfiguration(),
+        accessibilityIdentifier: String? = nil,
         @SettingBuilder tuple: () -> SettingTupleView
     ) {
         self.id = id
@@ -41,6 +43,7 @@ public struct SettingPage: Setting {
         self.backgroundColor = backgroundColor
         self.navigationTitleDisplayMode = navigationTitleDisplayMode
         self.previewConfiguration = previewConfiguration
+        self.accessibilityIdentifier = accessibilityIdentifier
         self.tuple = tuple()
     }
 

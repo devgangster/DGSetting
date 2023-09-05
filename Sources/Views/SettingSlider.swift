@@ -20,6 +20,7 @@ public struct SettingSlider: View, Setting {
     public var maximumImage: Image?
     public var verticalPadding = CGFloat(8)
     public var horizontalPadding: CGFloat? = nil
+    public var accessibilityIdentifier: String? = nil
 
     public init(
         id: AnyHashable? = nil,
@@ -29,7 +30,8 @@ public struct SettingSlider: View, Setting {
         minimumImage: Image? = nil,
         maximumImage: Image? = nil,
         verticalPadding: CGFloat = CGFloat(8),
-        horizontalPadding: CGFloat? = nil
+        horizontalPadding: CGFloat? = nil,
+        accessibilityIdentifier: String? = nil
     ) {
         self.id = id
         self._value = value
@@ -39,6 +41,7 @@ public struct SettingSlider: View, Setting {
         self.maximumImage = maximumImage
         self.verticalPadding = verticalPadding
         self.horizontalPadding = horizontalPadding
+        self.accessibilityIdentifier = accessibilityIdentifier
     }
 
     public var body: some View {

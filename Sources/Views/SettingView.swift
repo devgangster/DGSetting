@@ -22,6 +22,14 @@ public struct SettingView: View {
     }
 
     public var body: some View {
+        content()
+            .if(setting.accessibilityIdentifier != nil) { view in
+                view.accessibilityIdentifier(setting.accessibilityIdentifier!)
+            }
+    }
+
+    @ViewBuilder
+    private func content() -> some View {
         switch setting {
         case let text as SettingText:
             text

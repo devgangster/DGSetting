@@ -17,19 +17,22 @@ public struct SettingTextField: View, Setting {
     @Binding public var text: String
     public var verticalPadding = CGFloat(14)
     public var horizontalPadding: CGFloat? = nil
+    public var accessibilityIdentifier: String? = nil
 
     public init(
         id: AnyHashable? = nil,
         placeholder: String,
         text: Binding<String>,
         verticalPadding: CGFloat = CGFloat(14),
-        horizontalPadding: CGFloat? = nil
+        horizontalPadding: CGFloat? = nil,
+        accessibilityIdentifier: String? = nil
     ) {
         self.id = id
         self.placeholder = placeholder
         self._text = text
         self.verticalPadding = verticalPadding
         self.horizontalPadding = horizontalPadding
+        self.accessibilityIdentifier = accessibilityIdentifier
     }
 
     public var body: some View {

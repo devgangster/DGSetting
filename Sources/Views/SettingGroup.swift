@@ -22,6 +22,7 @@ public struct SettingGroup: Setting {
     public var dividerLeadingMargin = CGFloat(16)
     public var dividerTrailingMargin = CGFloat(0)
     public var dividerColor: Color?
+    public var accessibilityIdentifier: String? = nil
     @SettingBuilder public var tuple: SettingTupleView
 
     public init(
@@ -35,6 +36,7 @@ public struct SettingGroup: Setting {
         dividerLeadingMargin: CGFloat = CGFloat(16),
         dividerTrailingMargin: CGFloat = CGFloat(0),
         dividerColor: Color? = nil,
+        accessibilityIdentifier: String? = nil,
         @SettingBuilder tuple: () -> SettingTupleView
     ) {
         self.id = id
@@ -47,6 +49,7 @@ public struct SettingGroup: Setting {
         self.dividerLeadingMargin = dividerLeadingMargin
         self.dividerTrailingMargin = dividerTrailingMargin
         self.dividerColor = dividerColor
+        self.accessibilityIdentifier = accessibilityIdentifier
         self.tuple = tuple()
     }
 }

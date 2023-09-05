@@ -36,6 +36,8 @@ public struct SettingCustomView: Setting {
      */
     public var displayIndependentlyInSearch = true
 
+    public var accessibilityIdentifier: String? = nil
+
     /**
      The view to display.
      */
@@ -45,11 +47,13 @@ public struct SettingCustomView: Setting {
         id: AnyHashable? = nil,
         titleForSearch: String? = nil,
         displayIndependentlyInSearch: Bool = true,
+        accessibilityIdentifier: String? = nil,
         @ViewBuilder view: () -> Content
     ) where Content: View {
         self.id = id
         self.titleForSearch = titleForSearch
         self.displayIndependentlyInSearch = displayIndependentlyInSearch
+        self.accessibilityIdentifier = accessibilityIdentifier
         self.view = AnyView(view())
     }
 }

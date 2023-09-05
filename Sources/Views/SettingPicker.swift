@@ -21,6 +21,7 @@ public struct SettingPicker: View, Setting {
     public var horizontalSpacing = CGFloat(12)
     public var verticalPadding = CGFloat(14)
     public var horizontalPadding: CGFloat?
+    public var accessibilityIdentifier: String? = nil
     public var choicesConfiguration = ChoicesConfiguration()
 
     public init(
@@ -33,6 +34,7 @@ public struct SettingPicker: View, Setting {
         horizontalSpacing: CGFloat = CGFloat(12),
         verticalPadding: CGFloat = CGFloat(14),
         horizontalPadding: CGFloat? = nil,
+        accessibilityIdentifier: String? = nil,
         choicesConfiguration: ChoicesConfiguration = ChoicesConfiguration()
     ) {
         self.id = id
@@ -44,6 +46,7 @@ public struct SettingPicker: View, Setting {
         self.horizontalSpacing = horizontalSpacing
         self.verticalPadding = verticalPadding
         self.horizontalPadding = horizontalPadding
+        self.accessibilityIdentifier = accessibilityIdentifier
         self.choicesConfiguration = choicesConfiguration
     }
 
